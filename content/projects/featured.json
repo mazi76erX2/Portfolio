@@ -1,33 +1,25 @@
 [
 	{
 		"project": "Mention",
-		"url": "https://mysupplyco.com",
-		"repo": "Private",
-		"descriptionTitle": "D2C & B2B ecommerce site and blog",
-		"description": "with elegant solutions for a complex codebase and customer journey.",
+		"url": "https://pypi.org/project/mention",
+		"repo": "Public",
+		"descriptionTitle": "A Python wrapper around the Mention API.",
+		"description": "Mention-Python supports all of the App, Alert and Mention features of the Mention API. Fetch mention’s application data. Create, fetch, update, and delete an alert",
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
+			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/04.png" },
 			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
 			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stac/01.png" }
 		],
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
-			{ "key": "postgresql", 	"name": "Postgres", 	"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
-			{ "key": "woocommerce", "name": "WooCommerce", 	"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
+			{ "key": "pytest", 		"name": "PyTest", 		"type": "devicon" },
+			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
 		]
 	},
 	{
-		"project": "xolanimazibuko.net",
+		"project": "mazi76erx2.github.com",
 		"url": "https://github.com/mazi76erx2/portfolio",
 		"repo": "Public",
 		"descriptionTitle": "An open source portfolio",
