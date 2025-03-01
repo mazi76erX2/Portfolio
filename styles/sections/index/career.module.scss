@@ -1,5 +1,5 @@
 // Career component
-@import '../../scss/mixins';
+@use '../../scss/mixins' as mixins;
 
 .section {
 
@@ -117,7 +117,7 @@
 	}
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	.section {
 		.area {
 			.company,

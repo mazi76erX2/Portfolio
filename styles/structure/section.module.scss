@@ -1,4 +1,5 @@
-@import '../scss/_mixins';
+@use '../scss/mixins';
+
 
 .default {
 	position: relative;
@@ -9,6 +10,6 @@
 	overflow-x: hidden;
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	
 }

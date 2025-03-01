@@ -1,9 +1,12 @@
+"use client"
+
 import { useState, useEffect } from 'react';
 import Container from '../structure/container';
 import Icon from '../utils/icon.util';
 import css from '../../styles/structure/footer.module.scss';
 import content from '../../content/footer.json';
 import settings from '../../content/_settings.json';
+import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
 interface GitHubInfo {
   stars: number | null;
@@ -40,7 +43,7 @@ export default function Footer() {
             {content.acknowledgments.map(({ person, link, note }, index: number) => (
               <li key={index}>
                 <a href={link} rel="noreferrer" target="_blank">
-                  {person} <Icon icon={['fad', 'arrow-up-right-from-square']} />
+                  {person} <Icon icon={['fad', 'arrow-up-right-from-square' as IconName]} />
                 </a>
                 <p>{note}</p>
               </li>
@@ -53,7 +56,7 @@ export default function Footer() {
             {content.links.map(({ person, link, note }, index: number) => (
               <li key={index}>
                 <a href={link} rel="noreferrer" target="_blank">
-                  {person} <Icon icon={['fad', 'arrow-up-right-from-square']} />
+                  {person} <Icon icon={['fad', 'arrow-up-right-from-square' as IconName]} />
                 </a>
                 <p>{note}</p>
               </li>
@@ -66,7 +69,8 @@ export default function Footer() {
             <li className={css.socialList}>
               {content.social.map(({ url, icon }, index: number) => (
                 <a key={index} href={url} rel="noreferrer" target="_blank">
-                  <Icon icon={['fab', icon]} />
+                  {/* Cast the icon string to IconName */}
+                  <Icon icon={['fab', icon as IconName]} />
                 </a>
               ))}
             </li>
@@ -78,12 +82,12 @@ export default function Footer() {
             <ul>
               <li>
                 <p>
-                  <Icon icon={['fad', 'code-branch']} /> Forks: {gitHubInfo.forks}
+                  <Icon icon={['fad', 'code-branch' as IconName]} /> Forks: {gitHubInfo.forks}
                 </p>
               </li>
               <li>
                 <p>
-                  <Icon icon={['fad', 'star']} /> Stars: {gitHubInfo.stars}
+                  <Icon icon={['fad', 'star' as IconName]} /> Stars: {gitHubInfo.stars}
                 </p>
               </li>
             </ul>

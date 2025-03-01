@@ -13,7 +13,7 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ classProp = '', spacing = [], children }) => {
   return (
-    <div className={`${css.readingWidth} ${classProp} ${Spacing(spacing)}`}>
+    <div className={`${css.readingWidth} ${classProp} ${Spacing()}`}>
       {children}
     </div>
   );

@@ -1,4 +1,4 @@
-@import '../scss/_mixins';
+@use '../scss/mixins';
 
 .fullScreen {
 	width: 100%;
@@ -15,7 +15,7 @@
 	flex-direction: column;
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	.readingWidth {
 		width: calc(100% - 2rem);
 		margin-left: 1rem;

@@ -1,4 +1,4 @@
-@import '../scss/_mixins';
+@use '../scss/mixins';
 
 .container {
 	display: flex;
@@ -116,7 +116,7 @@
 	}
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	.container {
 		.sections {
 			flex-direction: column-reverse;

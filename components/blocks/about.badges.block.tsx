@@ -1,31 +1,55 @@
 import React from 'react';
-import styles from '../../styles/blocks/badges.module.scss';
+import Icon from '../utils/icon.util';
+import Badges from '../utils/badge.list.util';
+import badgesStyles from '../../styles/blocks/badges.module.scss';
+import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
-export interface BadgesProps {
+interface BadgesBlockProps {
+  title: string;
+  copy?: string;
   list: string[];
-  block: string;
-  color: string;
   fullContainer: boolean;
-  invertedColor?: boolean; // Added optional prop to fix TS error
+  block: string;
+  icon: string;
+  headerIcon?: string;
+  containerClass?: string;
 }
 
-const Badges: React.FC<BadgesProps> = ({ list, block, color, fullContainer, invertedColor }) => {
+const BadgesBlock: React.FC<BadgesBlockProps> = ({
+  title,
+  copy,
+  list,
+  fullContainer,
+  block,
+  icon,
+  headerIcon,
+  containerClass = '',
+}) => {
+  // Convert each string in list into a BadgeItem object
+  const badgeItems = list.map((item) => ({
+    key: item,
+    name: item,
+    type: 'fab', // adjust this default as needed
+  }));
+
   return (
-    <div
-      className={`
-        ${styles.badges} 
-        ${fullContainer ? styles.fullContainer : ''} 
-        ${invertedColor ? styles.inverted : ''}
-      `}
-      style={{ color }} // if you intend to use the "color" prop in-line
-    >
-      {list.map((badge, idx) => (
-        <span key={idx} className={`${styles.badge} ${block}`}>
-          {badge}
+    <div className={`${badgesStyles.badgeBlockContainer} ${containerClass}`}>
+      {headerIcon && (
+        <span className={headerIcon}>
+          {/* Cast icon to IconName; 'fat' here is used as the prefix */}
+          <Icon icon={['fat', icon as IconName]} />
         </span>
-      ))}
+      )}
+      <h3>{title}</h3>
+      {copy && <p>{copy}</p>}
+      <Badges 
+        list={badgeItems} 
+        block={block} 
+        fullContainer={fullContainer ? "fullContainer" : ""} 
+        color={false} 
+      />
     </div>
   );
 };
 
-export default Badges;
+export default BadgesBlock;

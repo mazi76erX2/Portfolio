@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { m, useAnimation, Variants } from 'framer-motion';
@@ -5,7 +7,6 @@ import { useInView } from 'react-intersection-observer';
 import Badges from '../../utils/badge.list.util';
 import Icon from '../../utils/icon.util';
 import css from '../../../styles/sections/projects/featured.module.scss';
-// import { FeaturedProjectContent } from '../../../content/projects/featured.types'; // Optionally define this type
 
 interface ImageData {
   key: string;
@@ -102,7 +103,13 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({ content, index }) => 
             </p>
           </div>
           <div className={css.stackContainer}>
-            <Badges list={stack} block="stack" fullContainer={false} color={false} />
+            {/* Convert the stack string array to an array of BadgeItem objects */}
+            <Badges 
+              list={stack.map((item) => ({ key: item, name: item, type: 'fab' }))}
+              block="stack"
+              fullContainer="" 
+              color={false} 
+            />
           </div>
           <m.div className={css.viewProject} variants={{}}>
             <Icon icon={['fad', 'arrow-right-to-bracket']} />

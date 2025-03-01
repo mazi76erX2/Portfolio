@@ -1,10 +1,11 @@
 import React from 'react';
 import Icon from '../utils/icon.util';
+import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
 interface CopyBlockProps {
   containerClass?: string;
   iconClass?: string;
-  icon?: [string, string]; // Adjust tuple type as needed
+  icon?: [IconPrefix, IconName];
   title: string;
   copy: string;
 }

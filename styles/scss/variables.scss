@@ -39,7 +39,7 @@
 }
 
 // Spatial sizing
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	:root {
 		// Fonts sizes
 		--font-xx:  0.60rem;

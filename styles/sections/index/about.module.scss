@@ -1,4 +1,4 @@
-@import '../../scss/mixins';
+@use '../../scss/mixins' as mixins;
 
 // Section
 .section {
@@ -124,7 +124,7 @@
 	}
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	.section {
 		.content {
 			flex-direction: column;

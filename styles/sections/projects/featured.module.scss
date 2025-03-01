@@ -1,4 +1,4 @@
-@import '../../scss/mixins';
+@use '../../scss/mixins' as mixins;
 
 .hasBg {
 	border-bottom: 1px solid var(--primary-dark);
@@ -15,7 +15,7 @@
     border: 1px solid var(--primary-dark);
 
 	.viewProject svg {
-		@include transition;
+		@include mixins.transition;
 	}
 
 	&:nth-of-type(2n) {
@@ -26,7 +26,7 @@
 		cursor: pointer;
 
 		.viewProject svg {
-			@include transition;
+			@include mixins.transition;
 			color: var(--neon-1-1);
 		}
 	}
@@ -248,7 +248,7 @@
 	}
 }
 
-@include media($max: $mobile) {
+@include mixins.media($max: mixins.$mobile) {
 	.project {
 		&:nth-of-type(n) {
 			flex-direction: column;

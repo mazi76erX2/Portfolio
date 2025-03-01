@@ -1,4 +1,4 @@
-@import '../../scss/_mixins';
+@use '../scss/mixins';
 
 //global.module.scss
 .section {
@@ -53,7 +53,7 @@
 		}
 	}
 
-	@include media($max: $mobile) {
+	@include mixins.media($max: mixins.$mobile) {
 		.preHeader {
 			font-size: 1rem;
 		}
@@ -161,7 +161,7 @@
 		transform: translateZ(0);
 	}
 
-	@include media($max: $mobile) {
+	@include mixins.media($max: mixins.$mobile) {
 		.radialContainer {
 			.radialGradient {
 				right: -180%;

@@ -5,13 +5,13 @@ import SetGridGap from '../components/utils/set.grid.util';
 import { Analytics } from '@vercel/analytics/react';
 
 // Global CSS Imports
-import '../node_modules/the-new-css-reset/css/reset.css';
+import 'the-new-css-reset/css/reset.css';
 import '@fontsource/fira-code/400.css';
 import '@fontsource/fira-code/600.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
-import '../node_modules/devicon/devicon.min.css';
+import 'devicon/devicon.min.css';
 import '../styles/css/variables.css';
 import '../styles/css/global.css';
 
