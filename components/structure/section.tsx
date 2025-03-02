@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import sections from '../../styles/structure/section.module.scss';
 

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import ThemeMode from '../utils/theme.util';
 import settings from '../../content/_settings.json';

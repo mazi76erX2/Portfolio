@@ -1,4 +1,4 @@
-mixins.$mobile: 768px;
+$mobile: 768px;
 
 @mixin media($max: false, $min: false) {
   $max-1: $max - 1;

@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Spacing from '../utils/spacing.util';
 import css from '../../styles/structure/container.module.scss';
@@ -12,8 +14,11 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ classProp = '', spacing = [], children }) => {
+  // Ensure the spacing utility returns a string based on provided spacing classes.
+  // For example, if Spacing accepts multiple arguments, spread the array:
+  const spacingClasses = Spacing(...spacing);
   return (
-    <div className={`${css.readingWidth} ${classProp} ${Spacing()}`}>
+    <div className={`${css.readingWidth} ${classProp} ${spacingClasses}`}>
       {children}
     </div>
   );

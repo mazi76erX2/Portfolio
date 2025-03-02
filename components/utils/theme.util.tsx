@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect, FC } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Script from 'next/script';
 import css from '../../styles/utils/theme.module.scss';
 

@@ -11,7 +11,7 @@ import '@fontsource/fira-code/600.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
-import 'devicon/devicon.min.css';
+// import 'devicon/devicon.min.css';
 import '../styles/css/variables.css';
 import '../styles/css/global.css';
 
@@ -24,8 +24,11 @@ export const metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   manifest: '/favicon/site.webmanifest',
-  themeColor: '#ffffff',
 };
+
+export const generateViewport = () => ({
+  themeColor: "#ffffff",
+});
 
 interface RootLayoutProps {
   children: React.ReactNode;
